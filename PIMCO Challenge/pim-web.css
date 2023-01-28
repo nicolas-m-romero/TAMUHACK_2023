@@ -3,7 +3,7 @@ body {
 	height: 100%;
     min-height: 650px;
 	font-family: "Exo", sans-serif;
-	color: red;
+	color: white;
 	background: linear-gradient(-45deg,#3B82F6,
     #2563EB,
     #4C1D95,
@@ -78,4 +78,16 @@ a:active
     color: yellow;
     background-color: transparent;
     text-decoration: underline;
+}
+
+#AgePrompt {
+    margin-top: 5vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    text-align: center;
+}
+
+#AgeChoice1 {
+    margin-left: 5vh;
+    margin-right: 80vh
 }
