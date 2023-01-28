@@ -87,7 +87,21 @@ a:active
     text-align: center;
 }
 
-#AgeChoice1 {
+#agePrompt2 {
+    text-align: center;
+}
+
+/* #AgeChoice1 {
     margin-left: 5vh;
     margin-right: 80vh
+     */
+/* } */
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
 }
