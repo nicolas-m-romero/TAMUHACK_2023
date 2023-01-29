@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(window).scroll(function(){
+            if ($(this).scrollTop() > 50) {
+              $('.navbar').fadeOut();
+            } else {
+              $('.navbar').fadeIn();
+            }
+          });
+        });
+      </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Teaching Financial Literacy</title>
+    <link rel="stylesheet" href="pim-web.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="pim-web.html">PIMCO+</a>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="pim-web.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="adultMortgage.html" class="nav-link">Mortgage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="adultInvestment.html" class="nav-link">Investment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="adultFinancialRisk.html" class="nav-link">Financial Risk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="adultFinancialRights.html" class="nav-link">Financial Rights</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+  <div id="quiz" style="padding-top:10%;" class="text-center">
+    <div id="question"></div>
+    <form>
+      <input type="radio" id="optionA" name="option" value="optionA">
+      <label for="optionA"></label>
+      <br>
+      <input type="radio" id="optionB" name="option" value="optionB">
+      <label for="optionB"></label>
+      <br>
+      <a class="btn btn-primary bg-primary text-light" onclick="checkAnswer()">Submit</a>
+    </form>
+  </div>
+  <script>
+    var questions = [
+        {
+            question: "Is it a good idea to only make the minimum monthly payment on your mortgage?",
+            options: ["Yes", "No"],
+            answer: "No"
+        },
+        {
+            question: "Does having a higher credit score typically result in a lower interest rate on a loan?",
+            options: ["Yes", "No"],
+            answer: "Yes"
+        },
+        {
+            question: "Is it always best to choose the loan with the lowest interest rate?",
+            options: ["Yes", "No"],
+            answer: "No"
+        },
+        {
+            question: "Can paying off a loan early result in penalty fees?",
+            options: ["Yes", "No"],
+            answer: "Yes"
+        },
+        {
+            question: "Are adjustable-rate mortgages generally more expensive in the long run compared to fixed-rate mortgages?",
+            options: ["Yes", "No"],
+            answer: "Yes"
+        },
+    ];
+
+    var currentQuestion = 0;
+    var score = 0;
+
+    function displayQuestion() {
+        var question = document.getElementById("question");
+        var options = document.getElementById("options");
+        var optionA = document.getElementById("optionA");
+        var optionB = document.getElementById("optionB");
+        question.innerHTML = questions[currentQuestion].question;
+        optionA.nextSibling.nodeValue = questions[currentQuestion].options[0];
+        optionB.nextSibling.nodeValue = questions[currentQuestion].options[1];
+    }
+
+    function getAns() {
+        if (optionA.checked)
+            return "Yes";
+        return "No";
+    }
+
+    function checkAnswer() {
+        answer = getAns();  
+        if (answer === questions[currentQuestion].answer) {
+            score++;
+        }
+        currentQuestion++;
+        if (currentQuestion === questions.length) {
+            displayScore();
+        } else {
+            displayQuestion();
+        }
+    }
+
+    function displayScore() {
+        var quiz = document.getElementById("quiz");
+        quiz.innerHTML = "You scored " + score + " out of " + questions.length + "!";
+    }
+
+    displayQuestion();
+  </script>
+    <div class="text-center">
+        <a style="margin-top:5%;" href="adultInvestment.html" class="btn btn-primary bg-primary text-light">Click to learn about investing!</a>
+    </div>
+</body>
+</html>
