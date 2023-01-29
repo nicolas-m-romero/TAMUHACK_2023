@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Teaching Financial Literacy</title>
     <link rel="stylesheet" href="pim-web.css">
 </head>
 <body>
-    <div>
-        
-    </div>
-  <div id="quiz">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="pim-web.html">PIMCO+</a>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="pim-web.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">Savings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">Credit Score</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="education.html" class="nav-link">Purchasing Goals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="awards.html" class="nav-link">Scam Protection</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+  <div id="quiz" style="padding-top:10%;" class="text-center">
     <div id="question"></div>
     <form>
       <input type="radio" id="optionA" name="option" value="optionA">
