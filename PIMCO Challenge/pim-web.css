@@ -4,10 +4,13 @@ body {
     min-height: 650px;
 	/* font-family: "Exo", sans-serif; */
 	color: white;
-	background: linear-gradient(-45deg,#3B82F6,
-    #2563EB,
-    #4C1D95,
-    black);
+	background: linear-gradient(-45deg,
+    #86faf2,
+    #30e7ed,
+    #00a6d7,
+    #0058b3,
+    #001b87
+    );
     vertical-align: center;
 	background-size: 400% 400%;
 	-webkit-animation: gr   adientBG 12s ease infinite;

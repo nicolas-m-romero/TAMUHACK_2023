@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(window).scroll(function(){
+            if ($(this).scrollTop() > 50) {
+              $('.navbar').fadeOut();
+            } else {
+              $('.navbar').fadeIn();
+            }
+          });
+        });
+      </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Teaching Financial Literacy</title>
+    <link rel="stylesheet" href="pim-web.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="pim-web.html">PIMCO+</a>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="pim-web.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="teenSavings.html" class="nav-link">Savings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="teenCreditScore.html" class="nav-link">Credit Score</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="teenPurchasingGoal.html" class="nav-link">Purchasing Goals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="teenScamProtection.html" class="nav-link">Scam Protection</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <div style="padding-top:5%;" style="width:70%;">
+        <article style="padding-left: 3%; padding-right:3%;">
+            <h1 id="ageGroup1">Teens</h1>
+        </article>
+    </div>
+</div>
+<script src="confetti.js">
+    // for starting the confetti 
+
+    const start = () => {
+            setTimeout(function() {
+                confetti.start()
+            }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  for stopping the confetti 
+
+        const stop = () => {
+            setTimeout(function() {
+                confetti.stop()
+            }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+// after this here we are calling both the function so it works
+        start();
+        stop();
+
+</script>
+<h4 style="padding-top:15%;">Congrats! You've completed our guide to financy literacy for teens!🎇</h4>
+</body>
+</html>
