@@ -25,6 +25,12 @@ html, body {
     right: 0;
     z-index: 9999;
     width: 100%;
+    text-emphasis-color: blue;
+    background-color: white;
+}
+.navbar {
+    /* border-bottom: 5px solid navy; */
+    border-top: 8px solid #032d5f;
 }
 
 .container {
@@ -71,6 +77,11 @@ html, body {
 		background-position: 0% 50%;
 	}
 }
+
+.article {
+    margin-top:5%;
+}
+
 #placeholder-pic
 {
     width:200px;
@@ -78,25 +89,25 @@ html, body {
 }
 a:link
 {
-    color:orange;
+    color:#032d5f;
     background-color:transparent;
     text-decoration: none;
 }
-a:visited 
+/* a:visited 
 {
     color: rgb(12, 199, 12);
     background-color: transparent;
     text-decoration: none;
-}
+} */
 a:hover
 {
-    color: navy;
+    color: #032d5f;
     background-color: transparent;
     text-decoration: underline;
 }
 a:active 
 {
-    color: yellow;
+    color: #032d5f;
     background-color: transparent;
     text-decoration: underline;
 }
