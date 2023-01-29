@@ -83,6 +83,9 @@
     }
     output = document.getElementById("output");
     output.innerHTML = "<strong>Your tax is $"+tax+"!!!</strong>";
+    var nextBut = document.getElementById("nextBut");
+    nextBut.classList.remove("invisible");
+    nextBut.classList.add("visible");
 }
 </script>
 
@@ -98,8 +101,9 @@
 
         <a style="margin-bottom:5%;" onclick="calculateTaxes()" class="btn btn-primary bg-primary text-light">Calculate your theoretical tax</a>
         <p id="output" style="padding-bottom:5%;"></p>    
-        </article>
-
+        <a href="yAdultScamProtection.html" id="nextBut" style="margin-bottom:5%;"" class="btn btn-primary bg-primary text-light invisible">Click to learn how you can protect yourself from scams!</a>    
+    </article>
+        
 
 
     </div>
