@@ -46,13 +46,19 @@
         var options = document.getElementById("options");
         var optionA = document.getElementById("optionA");
         var optionB = document.getElementById("optionB");
-
         question.innerHTML = questions[currentQuestion].question;
         optionA.nextSibling.nodeValue = questions[currentQuestion].options[0];
         optionB.nextSibling.nodeValue = questions[currentQuestion].options[1];
     }
 
-    function checkAnswer(answer) {
+    function getAns() {
+        if (optionA.checked)
+            return "Yes";
+        return "No";
+    }
+
+    function checkAnswer() {
+        answer = getAns();  
         if (answer === questions[currentQuestion].answer) {
             score++;
         }
