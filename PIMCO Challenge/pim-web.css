@@ -52,6 +52,10 @@ html, body {
 .primaryText {
     color: rgb(155, 88, 25);
 }
+#ageGroup1 {
+    padding-top: 3%;
+}
+
 @-webkit-keyframes gradientBG {
     0% 
     {
